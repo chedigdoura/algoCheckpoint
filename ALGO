@@ -1,0 +1,30 @@
+function sentence(str) {
+    let res_one = str.length ;
+    let majstr = str.toUpperCase();
+    let res_two = 0 ;
+    let res_three = 0 ;
+    
+for (i=0; i < str.length ; i++){
+        if (str[i] === " " || str[i] === "'") {
+        res_two++
+        }
+        }
+    
+for (i=0; i < str.length ; i++){
+        if (  majstr[i] === "E" 
+           || majstr[i] === "A"
+           || majstr[i] === "I"
+           || majstr[i] === "O"
+           || majstr[i] === "U") {
+        res_three++
+        }
+      }
+    
+      let finalresult ={ TheLengthOftheSentence:res_one ,
+                         TheNumberOfWords:(res_two+1),
+                         TheNumberOfVowels:res_three}
+      
+      return finalresult
+    }
+    
+    console.log (sentence("Hell's kitchen"))
